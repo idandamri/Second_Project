@@ -11,6 +11,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,10 +37,10 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        init();
+        initRecycler();
     }
 
-    private void init() {
+    private void initRecycler() {
         rec = (RecyclerView)findViewById(R.id.rec_view);
         rec.setHasFixedSize(true);
 
@@ -87,6 +89,8 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        /********* to update by reddit *********/
+
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
@@ -104,5 +108,12 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void onClickOfCard(View view) {
+        int selected_id = view.getId();
+        Toast.makeText(MainActivity.this, "The selected id is: " + selected_id, Toast.LENGTH_SHORT).show();
+        // open reddit page
+        //Intent intent = new Intent();
     }
 }

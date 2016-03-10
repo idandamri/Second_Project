@@ -20,23 +20,27 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
         allItems = new ArrayList<RealItem>();
 
         RealItem real_item = new RealItem();
-        real_item.setName("Name+Lastname");
-        real_item.setPlayer(R.mipmap.ic_launcher);
+        real_item.setCon_text("Name+Lastname");
+        real_item.setTitle("Title");
+        real_item.setImg(R.mipmap.ic_launcher);
         allItems.add(real_item);
 
         real_item = new RealItem();
-        real_item.setName("Name2+Lastname2");
-        real_item.setPlayer(R.mipmap.ic_launcher);
+        real_item.setCon_text("Name2+Lastname2");
+        real_item.setTitle("Title2");
+        real_item.setImg(R.mipmap.ic_launcher);
         allItems.add(real_item);
 
         real_item = new RealItem();
-        real_item.setName("Name3+Lastname3");
-        real_item.setPlayer(R.mipmap.ic_launcher);
+        real_item.setCon_text("Name3+Lastname3");
+        real_item.setTitle("Title3");
+        real_item.setImg(R.mipmap.ic_launcher);
         allItems.add(real_item);
 
         real_item = new RealItem();
-        real_item.setName("Name3+Lastname3");
-        real_item.setPlayer(R.mipmap.ic_launcher);
+        real_item.setCon_text("Name3+Lastname4");
+        real_item.setTitle("Title4");
+        real_item.setImg(R.mipmap.ic_launcher);
         allItems.add(real_item);
     }
 
@@ -52,8 +56,9 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(CardAdapter.ViewHolder holder, int position) {
         RealItem ri = allItems.get(position);
-        holder.iv.setImageResource(ri.getPlayer());
-        holder.tv.setText(ri.getName());
+        holder.iv.setImageResource(ri.getImg());
+        holder.title_tv.setText(ri.getTitle());
+        holder.tv.setText(ri.getCon_text());
     }
 
     @Override
@@ -63,13 +68,15 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView iv;
+        public TextView title_tv;
         public TextView tv;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
             iv = (ImageView) itemView.findViewById(R.id.small_image);
-            tv = (TextView) itemView.findViewById(R.id.name);
+            title_tv = (TextView) itemView.findViewById(R.id.title);
+            tv = (TextView) itemView.findViewById(R.id.con_text);
         }
     }
 }

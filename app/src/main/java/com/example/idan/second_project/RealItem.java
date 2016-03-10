@@ -5,22 +5,34 @@ package com.example.idan.second_project;
  */
 public class RealItem {
 
-    private int player;
-    private String name;
+    private int img;
+    private String title;
 
-    public int getPlayer() {
-        return player;
+    public String getCon_text() {
+        return con_text;
     }
 
-    public void setPlayer(int player) {
-        this.player = player;
+    public void setCon_text(String con_text) {
+        this.con_text = con_text;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
+
+    public int getImg() {
+        return img;
+    }
+
+    public void setImg(int img) {
+        this.img = img;
+    }
+
+    private String con_text;
+
+
 }
