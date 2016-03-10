@@ -26,17 +26,17 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
 
         real_item = new RealItem();
         real_item.setName("Name2+Lastname2");
-        real_item.setPlayer(R.mipmap.ic_launcher1);
+        real_item.setPlayer(R.mipmap.ic_launcher);
         allItems.add(real_item);
 
         real_item = new RealItem();
         real_item.setName("Name3+Lastname3");
-        real_item.setPlayer(R.mipmap.ic_launcher2);
+        real_item.setPlayer(R.mipmap.ic_launcher);
         allItems.add(real_item);
 
         real_item = new RealItem();
         real_item.setName("Name3+Lastname3");
-        real_item.setPlayer(R.mipmap.ic_launcher3);
+        real_item.setPlayer(R.mipmap.ic_launcher);
         allItems.add(real_item);
     }
 
